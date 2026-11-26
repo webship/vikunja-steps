@@ -1,0 +1,66 @@
+{
+  "name": "@webship-js/vikunja-steps",
+  "version": "2.0.0",
+  "description": "Cucumber step definitions for Vikunja, the open-source to-do and project management app, a pack for webship-js (Playwright and Cucumber): logging in and out and its refusals, a project and who may open it by its sharing, the task list, one task (done or not, its comments, its labels, its assignee, who made it), a new task, what read-only sharing or none may not do, and the board with its buckets. Test content is made and removed through the site's own API, so a run leaves the site as it found it.",
+  "main": "tests/step-definitions/vikunja-helpers.js",
+  "files": [
+    "tests/step-definitions/",
+    "tests/features/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:dry": "cucumber-js --config cucumber.js --dry-run",
+    "test:examples": "node tests/check-examples.js",
+    "test:paths": "node tests/check-paths.js",
+    "test:must-fail": "node tests/check-must-fail.js",
+    "test:chromium": "BROWSER=chromium cucumber-js --config cucumber.js",
+    "test:firefox": "BROWSER=firefox cucumber-js --config cucumber.js",
+    "test:webkit": "BROWSER=webkit cucumber-js --config cucumber.js",
+    "test:headed": "HEADLESS=false cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports",
+    "test:fast": "SLOW_MO=0 cucumber-js --config cucumber.js"
+  },
+  "keywords": [
+    "webship-js",
+    "vikunja",
+    "to-do",
+    "project-management",
+    "tasks",
+    "kanban",
+    "cucumber",
+    "cucumber-js",
+    "playwright",
+    "bdd",
+    "gherkin",
+    "step-definitions",
+    "e2e-testing"
+  ],
+  "author": "Webship.co",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webship/vikunja-steps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webship/vikunja-steps/issues"
+  },
+  "homepage": "https://github.com/webship/vikunja-steps#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 24.0"
+  },
+  "peerDependencies": {
+    "webship-js": "^2.0.16"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.0",
+    "webship-js": "^2.0.17"
+  },
+  "overrides": {
+    "@cucumber/cucumber": "^12"
+  }
+}
