@@ -9,6 +9,7 @@ Feature: The board of a project
     Then the bucket "Doing" should list the task "The greeting script says Helo instead of Hello"
     And the bucket "Doing" should not list the task "The usage line spells greeting as greting"
     And the bucket "To-Do" should list the task "The usage line spells greeting as greting"
+    And the bucket "Done" should list the task "The greeting script ends without a newline"
 
   Scenario: A task marked done goes to the Done bucket
     Given there is a task "Webship test board" in the project "Webship site"

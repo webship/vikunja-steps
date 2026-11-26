@@ -244,7 +244,9 @@ and shared with member (read & write) and reader (read only):
 
 - "The greeting script says Helo instead of Hello" (WEB-1): by the owner, high, labelled bug, assigned to the member,
   in the board's Doing, with the owner's comment;
-- "The usage line spells greeting as greting" (WEB-2): by the member, in To-Do.
+- "The usage line spells greeting as greting" (WEB-2): by the member, in To-Do;
+- "The greeting script ends without a newline" (WEB-3): by the owner, done, in Done (the list does not show it, the
+  table marks it Done).
 
 The features read the sample content and never change it. The site script (`site/vikunja-site.php`) is the one of the
 Webship Workspace's Vikunja plugin: as Vikunja's image has no shell, it runs with PHP in the project's web container,

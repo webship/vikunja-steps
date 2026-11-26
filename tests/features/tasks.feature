@@ -8,6 +8,7 @@ Feature: The tasks of a project
     Given I am a logged in user with the "member" user
     When I open the project "Webship site"
     Then the task list should show "The greeting script says Helo instead of Hello"
+    And the task list should not show "The greeting script ends without a newline"
     And the task list should not show "Webship test nothing"
 
   Scenario: A sample task by its key: its author, its assignee, its label and its comment
@@ -18,6 +19,12 @@ Feature: The tasks of a project
     And the task should have the label "bug"
     And the task should show the comment "Seen on the test site" by "Owner Test"
     And the task should not be done
+
+  Scenario: A sample task that is done
+    Given I am a logged in user with the "member" user
+    When I open the task "The greeting script ends without a newline"
+    Then the task should be done
+    And the task should be created by "Owner Test"
 
   Scenario: A task marked done, and not done again
     Given there is a task "Webship test done" in the project "Webship site"

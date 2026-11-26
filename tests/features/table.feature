@@ -9,6 +9,7 @@ Feature: The table of a project
     Then the table should show the task "The greeting script says Helo instead of Hello"
     And the table row of the task "The greeting script says Helo instead of Hello" should show "WEB-1"
     And the table row of the task "The greeting script says Helo instead of Hello" should show "bug"
+    And the table row of the task "The greeting script ends without a newline" should show "Done"
     And the table should not show the task "Webship test nothing"
 
   Scenario: A task done stays in the table, marked Done
