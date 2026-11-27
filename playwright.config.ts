@@ -4,11 +4,12 @@ type BrowserName = 'chromium' | 'firefox' | 'webkit';
 
 const browser = (process.env.BROWSER || 'chromium') as BrowserName;
 
+// No --disable-web-security: a browser started with it turns off the same-origin policy a visitor's browser has, so a
+// suite would not run as a visitor does (webship-js's own config dropped it; Wekan's sign-in failed with it).
 const chromiumArgs: string[] = [
   '--no-sandbox',
   '--disable-dev-shm-usage',
   '--disable-setuid-sandbox',
-  '--disable-web-security',
   '--ignore-certificate-errors',
   '--disable-extensions',
   '--incognito',
