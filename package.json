@@ -1,6 +1,6 @@
 {
   "name": "@webship-js/vikunja-steps",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Cucumber step definitions for Vikunja, the open-source to-do and project management app, a pack for webship-js (Playwright and Cucumber): logging in and out and its refusals, a project and who may open it by its sharing, the task list, one task (done or not, its comments, its labels, its assignee, who made it), a new task, what read-only sharing or none may not do, and the board with its buckets. Test content is made and removed through the site's own API, so a run leaves the site as it found it.",
   "main": "tests/step-definitions/vikunja-helpers.js",
   "files": [
